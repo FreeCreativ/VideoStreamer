@@ -13,5 +13,21 @@
     "morgan": "~1.9.1",
     "pg-promise": "^11.2.0",
     "pug": "2.0.0-beta11"
-  }
+  },
+  "description": "video streaming server",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FreeCreativ/VideoStreamer.git"
+  },
+  "keywords": [
+    "family"
+  ],
+  "author": "freecreativ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FreeCreativ/VideoStreamer/issues"
+  },
+  "homepage": "https://github.com/FreeCreativ/VideoStreamer#readme"
 }

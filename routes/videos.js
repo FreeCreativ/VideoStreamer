@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const fs = require("fs");
-const db = require("db")
+const db = require("../db")
 
 router.post('/upload', (req, res) => {
     let videoFiles = req.post().files;
