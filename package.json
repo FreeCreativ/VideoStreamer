@@ -3,20 +3,29 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node bin/server",
+    "nd": "nodemon bin/server"
   },
   "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.20.2",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
+    "express": "^4.18.2",
+    "formidable": "^2.1.1",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "pg-promise": "^11.2.0",
-    "pug": "2.0.0-beta11"
+    "knex": "^2.4.2",
+    "morgan": "~1.10.0",
+    "nodemailer": "^6.9.1",
+    "pg": "^8.9.0",
+    "pug": "^3.0.2",
+    "sqlite3": "^5.1.4"
   },
   "description": "video streaming server",
   "main": "app.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FreeCreativ/VideoStreamer.git"
