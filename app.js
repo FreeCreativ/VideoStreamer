@@ -2,28 +2,15 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+// const bodyParser = require('body-parser')
 const logger = require('morgan');
-
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const videosRouter = require('./routes/videos');
 const imagesRouter = require('./routes/images');
+const chatsRouter = require('./routes/chats');
 
 const app = express();
-const knex = require('knex')({
-    client: 'pg',
-    connection: {
-        host: '127.0.0.1',
-        port: 5432,
-        user: 'postgres',
-        password: 'Dontobec12345',
-        database: 'family'
-    }
-});
-
-const db = knex()
-console.log(db)
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -32,12 +19,14 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
+// app.use(bodyParser);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/video', videosRouter);
+app.use('/videos', videosRouter);
 app.use('/images', imagesRouter);
+app.use('/chats', chatsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
